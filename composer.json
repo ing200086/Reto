@@ -1,0 +1,40 @@
+{
+    "name": "ing200086/reto",
+    "description": "Mathematical graph library.",
+    "type": "library",
+    "license": "MIT",
+    "repositories":
+    [
+        {
+            "type": "vcs",
+            "url": "https://github.com/ing200086/Envase"
+        }
+    ],
+    "authors": [
+        {
+            "name": "Daniel Barnhart",
+            "email": "ing200086@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Ing200086\\Reto\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Ing200086\\Reto\\Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "php": "^7.2",
+        "ing200086/envase": "master"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.3",
+        "mockery/mockery": "^1.1",
+        "phpmetrics/phpmetrics": "^2.4",
+        "ext-json": "^1.6"
+    }
+}
