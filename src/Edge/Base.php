@@ -15,19 +15,19 @@ class Base implements EntityInterface {
         $this->_destination = $destination;
     }
 
-    public static function Undirected(string $source, string $destination)
+    public static function Undirected(NewEdge $builder)
     {
-        return new static($source, $destination, '<>');
+        return new static($builder->source(), $builder->destination(), '<>');
     }
 
-    public static function FromTo(string $source, string $destination)
+    public static function FromTo(NewEdge $builder)
     {
-        return new static($source, $destination, '->');
+        return new static($builder->source(), $builder->destination(), '->');
     }
 
-    public static function ToFrom(string $source, string $destination)
+    public static function ToFrom(NewEdge $builder)
     {
-        return new static($source, $destination, '<-');
+        return new static($builder->source(), $builder->destination(), '<-');
     }
 
     public function getId() : string

@@ -14,16 +14,18 @@ class Collection implements \Countable {
     }
 
     /**
-     * @param array $edges
+     * @param array                             $edges
+     * @param \Ing200086\Reto\Vertex\Collection $vertices
      * @return Collection
+     * @throws \Exception
      */
-    public static function FromArray(array $edges)
+    public static function FromArray(array $edges, \Ing200086\Reto\Vertex\Collection $vertices)
     {
         $that = new static();
 
         foreach ( $edges as $edge )
         {
-            $that->create(Base::Undirected($edge, $edge));
+            $that->create(NewEdge::FromId($edge)->build($vertices));
         }
 
         return $that;

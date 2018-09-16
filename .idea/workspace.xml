@@ -2,77 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97c3402d-56fe-45fc-b36e-a560c31dc85b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/phpunit.xml.dist" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml.dist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_log/metrics/all.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_log/metrics/complexity.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_log/metrics/coupling.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_log/metrics/css/clusterize.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_log/metrics/css/material-icons.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_log/metrics/css/milligram.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_log/metrics/css/milligram.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_log/metrics/css/normalize.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_log/metrics/css/roboto.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_log/metrics/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_log/metrics/fonts/material-icons.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_log/metrics/fonts/roboto-bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_log/metrics/fonts/roboto-light.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_log/metrics/images/logo-git.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_log/metrics/images/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_log/metrics/images/phpmetrics-maintenability.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_log/metrics/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_log/metrics/js/classes.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_log/metrics/js/clusterize.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_log/metrics/js/d3.hexbin.v0.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_log/metrics/js/d3.v3.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_log/metrics/js/functions.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_log/metrics/js/graph-licenses.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_log/metrics/js/graph-maintainability.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_log/metrics/js/history-1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_log/metrics/js/latest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_log/metrics/js/sort-table.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_log/metrics/junit.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_log/metrics/loc.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_log/metrics/oop.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_log/metrics/package_relations.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_log/metrics/packages.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_log/metrics/panel.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_log/metrics/relations.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_log/metrics/violations.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_log/report/.css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_log/report/.css/custom.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_log/report/.css/nv.d3.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_log/report/.css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_log/report/.fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_log/report/.fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_log/report/.fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_log/report/.fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_log/report/.fonts/glyphicons-halflings-regular.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_log/report/.js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_log/report/.js/d3.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_log/report/.js/file.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_log/report/.js/holder.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_log/report/.js/html5shiv.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_log/report/.js/jquery.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_log/report/.js/nv.d3.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_log/report/.js/respond.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_log/report/Edge.php.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_log/report/EdgeBuilder.php.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_log/report/EdgeCollection.php.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_log/report/Graph.php.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_log/report/NewEdge.php.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_log/report/Pathfinder.php.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_log/report/Vertex.php.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_log/report/Vertex/Collection.php.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_log/report/Vertex/Single.php.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_log/report/Vertex/Vertex.php.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_log/report/Vertex/VertexCollection.php.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_log/report/Vertex/dashboard.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_log/report/Vertex/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_log/report/VertexCollection.php.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_log/report/dashboard.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/_log/report/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Edge/Base.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Edge/Base.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Edge/Collection.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Edge/Collection.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Edge/NewEdge.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Edge/NewEdge.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Graph.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graph.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -189,14 +122,14 @@
           <entry key="dummy" value="30" />
           <entry key="gitignore" value="2" />
           <entry key="json" value="39" />
-          <entry key="php" value="5887" />
+          <entry key="php" value="6588" />
           <entry key="txt" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="39" />
-          <entry key="PHP" value="5887" />
+          <entry key="PHP" value="6588" />
           <entry key="PLAIN_TEXT" value="43" />
           <entry key="XML" value="2" />
         </counts>
@@ -205,14 +138,14 @@
         <counts>
           <entry key="dist" value="2" />
           <entry key="gitignore" value="2" />
-          <entry key="json" value="2" />
-          <entry key="php" value="49" />
+          <entry key="json" value="3" />
+          <entry key="php" value="53" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JSON" value="2" />
-          <entry key="PHP" value="49" />
+          <entry key="JSON" value="3" />
+          <entry key="PHP" value="53" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="XML" value="2" />
         </counts>
@@ -235,29 +168,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Edge/NewEdge.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="498">
+              <caret line="30" column="33" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Edge/Base.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/phpunit.xml.dist">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="21" column="49" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
+            <state relative-caret-position="504">
+              <caret line="24" column="73" selection-start-line="24" selection-start-column="73" selection-end-line="24" selection-end-column="73" />
             </state>
           </provider>
         </entry>
@@ -265,29 +189,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Edge/Collection.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="25" column="43" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Edge/NewEdge.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="666">
-              <caret line="43" column="90" selection-start-line="43" selection-start-column="90" selection-end-line="43" selection-end-column="90" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/Feature/GraphEdgeTest.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
-              <folding>
-                <element signature="e#48#73#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="567">
+              <caret line="27" column="47" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -295,11 +198,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Graph.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="708">
-              <caret line="39" column="70" selection-start-line="39" selection-start-column="70" selection-end-line="39" selection-end-column="70" />
+            <state relative-caret-position="393">
+              <caret line="24" column="45" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
               <folding>
                 <element signature="e#34#87#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/Config/Linear.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="42">
+              <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -333,14 +245,14 @@
         <option value="$PROJECT_DIR$/src/Edge/EdgeCollection.php" />
         <option value="$PROJECT_DIR$/tests/Feature/GraphBuildTest.php" />
         <option value="$PROJECT_DIR$/src/Edge/EdgeInterface.php" />
-        <option value="$PROJECT_DIR$/src/Edge/Collection.php" />
         <option value="$PROJECT_DIR$/src/NewEdge.php" />
-        <option value="$PROJECT_DIR$/src/Edge/Base.php" />
-        <option value="$PROJECT_DIR$/src/Graph.php" />
-        <option value="$PROJECT_DIR$/src/Edge/NewEdge.php" />
         <option value="$PROJECT_DIR$/tests/Feature/GraphEdgeTest.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/phpunit.xml.dist" />
+        <option value="$PROJECT_DIR$/src/Edge/Base.php" />
+        <option value="$PROJECT_DIR$/src/Graph.php" />
+        <option value="$PROJECT_DIR$/src/Edge/Collection.php" />
+        <option value="$PROJECT_DIR$/src/Edge/NewEdge.php" />
       </list>
     </option>
   </component>
@@ -427,6 +339,12 @@
               <item name="Reto" type="b2602c69:ProjectViewProjectNode" />
               <item name="Reto" type="462c0819:PsiDirectoryNode" />
               <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="Config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Reto" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Reto" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
               <item name="Feature" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -496,12 +414,12 @@
       <updated>1536985800075</updated>
       <workItem from="1536985801345" duration="939000" />
       <workItem from="1536986771748" duration="10207000" />
-      <workItem from="1537048504659" duration="18071000" />
+      <workItem from="1537048504659" duration="19122000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29217000" />
+    <option name="totallyTimeSpent" value="30268000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
@@ -597,13 +515,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Config/Linear.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/Ing200086/Envase/src/EntityContainer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-174">
@@ -679,30 +590,6 @@
     <entry file="file://$PROJECT_DIR$/src/Edge/RegisteredFromTo.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Edge/Collection.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="25" column="43" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Edge/NewEdge.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="666">
-          <caret line="43" column="90" selection-start-line="43" selection-start-column="90" selection-end-line="43" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Graph.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="708">
-          <caret line="39" column="70" selection-start-line="39" selection-start-column="70" selection-end-line="39" selection-end-column="70" />
-          <folding>
-            <element signature="e#34#87#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/Feature/GraphEdgeTest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -710,13 +597,6 @@
           <folding>
             <element signature="e#48#73#0#PHP" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Edge/Base.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -729,8 +609,46 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/phpunit.xml.dist">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="21" column="49" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
+        <state relative-caret-position="126">
+          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Edge/Base.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="24" column="73" selection-start-line="24" selection-start-column="73" selection-end-line="24" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Config/Linear.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Graph.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="24" column="45" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
+          <folding>
+            <element signature="e#34#87#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Edge/Collection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="27" column="47" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Edge/NewEdge.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="498">
+          <caret line="30" column="33" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
         </state>
       </provider>
     </entry>

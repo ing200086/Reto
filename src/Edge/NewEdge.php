@@ -9,32 +9,66 @@ class NewEdge {
     protected $_source;
     protected $_destination;
 
-    public function __construct(Base $edge, string $source, string $destination)
+    public function __construct(string $source, string $destination)
     {
-        $this->_edge = $edge;
         $this->_source = $source;
         $this->_destination = $destination;
     }
 
+    public static function FromId(string $id)
+    {
+        if (stristr($id, "<>")) {
+            $source = strtok($id, "<>");
+            $destination = strtok("<>");
+            return static::Undirected($source, $destination);
+        } elseif (stristr($id, "->")) {
+            $source = strtok($id, "->");
+            $destination = strtok("->");
+            return static::FromTo($source, $destination);
+        } elseif (stristr($id, "<-")) {
+            $source = strtok($id, "<-");
+            $destination = strtok("<-");
+            return static::ToFrom($source, $destination);
+        }
+    }
+
     public static function Undirected(string $source, string $destination)
     {
-        $edge = Base::Undirected($source, $destination);
+        $that = new static ($source, $destination);
+        $that->setEdge(Base::Undirected($that));
 
-        return new static($edge, $source, $destination);
+        return $that;
     }
 
     public static function FromTo(string $source, string $destination)
     {
-        $edge = Base::FromTo($source, $destination);
+        $that = new static ($source, $destination);
+        $that->setEdge(Base::FromTo($that));
 
-        return new static($edge, $source, $destination);
+        return $that;
     }
 
     public static function ToFrom(string $source, string $destination)
     {
-        $edge = Base::ToFrom($source, $destination);
+        $that = new static ($source, $destination);
+        $that->setEdge(Base::ToFrom($that));
 
-        return new static($edge, $source, $destination);
+        return $that;
+    }
+
+    protected function setEdge(Base $edge)
+    {
+        $this->_edge = $edge;
+    }
+
+    public function source()
+    {
+        return $this->_source;
+    }
+
+    public function destination()
+    {
+        return $this->_destination;
     }
 
     public function build(Collection $vertices)

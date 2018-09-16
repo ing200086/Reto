@@ -20,7 +20,7 @@ class Graph {
     public static function FromJson(array $json)
     {
         $vertices = VertexCollection::FromArray(self::indexOrEmpty($json, 'vertices'));
-        $edges = EdgeCollection::FromArray(self::indexOrEmpty($json, 'edges'));
+        $edges = EdgeCollection::FromArray(self::indexOrEmpty($json, 'edges'), $vertices);
 
         return new static($vertices, $edges);
     }
