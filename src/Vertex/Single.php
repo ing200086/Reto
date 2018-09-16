@@ -1,10 +1,10 @@
 <?php
 
-namespace Ing200086\Reto;
+namespace Ing200086\Reto\Vertex;
 
 use Ing200086\Envase\Interfaces\EntityInterface;
 
-class Vertex implements EntityInterface {
+class Single implements EntityInterface {
     protected $_id;
 
     public function __construct(string $id)

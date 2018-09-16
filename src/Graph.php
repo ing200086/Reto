@@ -2,6 +2,8 @@
 
 namespace Ing200086\Reto;
 
+use Ing200086\Reto\Vertex\Collection as VertexCollection;
+
 class Graph {
     protected $_vertices;
     protected $_edges;
@@ -15,7 +17,6 @@ class Graph {
 
     public static function FromJson(array $json)
     {
-//        var_dump($json);
         $vertices = VertexCollection::FromArray(self::indexOrEmpty($json, 'vertices'));
         $edges = EdgeCollection::FromArray(self::indexOrEmpty($json, 'edges'));
 
@@ -24,12 +25,7 @@ class Graph {
 
     protected static function indexOrEmpty(array $source, $index)
     {
-        if (isset($source[$index]))
-        {
-            return $source[$index];
-        }
-
-        return [];
+        return (isset($source[$index])) ? $source[$index] : [];
     }
 
     public function vertices()
@@ -40,5 +36,13 @@ class Graph {
     public function edges()
     {
         return $this->_edges;
+    }
+
+    public function trace()
+    {
+        return array_values(array_map(function($vertex)
+        {
+            return $vertex->getId();
+        }, $this->_vertices->toArray()));
     }
 }
