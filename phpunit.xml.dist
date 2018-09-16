@@ -19,7 +19,7 @@
         </whitelist>
     </filter>
     <logging>
-        <log type="coverage-html" target="tests/_log/report"/>
+        <log type="coverage-html" target="tests/.log/report"/>
         <!--<log type="coverage-php" target="tests/log/coverage.serialized"/>-->
     </logging>
 </phpunit>
