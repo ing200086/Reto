@@ -2,6 +2,8 @@
 
 namespace Ing200086\Reto;
 
+use Ing200086\Reto\Edge\Collection as EdgeCollection;
+use Ing200086\Reto\Edge\NewEdge;
 use Ing200086\Reto\Vertex\Collection as VertexCollection;
 
 class Graph {
@@ -28,21 +30,18 @@ class Graph {
         return (isset($source[$index])) ? $source[$index] : [];
     }
 
-    public function vertices()
-    {
-        return $this->_vertices;
-    }
-
     public function edges()
     {
         return $this->_edges;
     }
 
-    public function trace()
+    public function define(NewEdge $edgeCreator)
     {
-        return array_values(array_map(function($vertex)
-        {
-            return $vertex->getId();
-        }, $this->_vertices->toArray()));
+        $this->_edges->create($edgeCreator->build($this->vertices()));
+    }
+
+    public function vertices()
+    {
+        return $this->_vertices;
     }
 }

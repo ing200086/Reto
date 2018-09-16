@@ -2,6 +2,8 @@
 
 namespace Ing200086\Reto\Vertex;
 
+use Ing200086\Reto\Vertex\Single as Vertex;
+
 use Ing200086\Envase\EntityContainer;
 
 /**
@@ -31,6 +33,11 @@ class Collection implements \Countable {
         }
 
         return $that;
+    }
+
+    public function create(string $id)
+    {
+        $this->container->add(Vertex::Create($id));
     }
 
     /**

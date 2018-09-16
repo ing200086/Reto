@@ -1,12 +1,11 @@
 <?php
 
-
-namespace Ing200086\Reto;
-
+namespace Ing200086\Reto\Edge;
 
 use Ing200086\Envase\EntityContainer;
+//use Ing200086\Reto\Edge\Base;
 
-class EdgeCollection implements \Countable {
+class Collection implements \Countable {
     protected $container;
 
     public function __construct()
@@ -16,7 +15,7 @@ class EdgeCollection implements \Countable {
 
     /**
      * @param array $edges
-     * @return EdgeCollection
+     * @return Collection
      */
     public static function FromArray(array $edges)
     {
@@ -24,16 +23,16 @@ class EdgeCollection implements \Countable {
 
         foreach ( $edges as $edge )
         {
-            $that->add(Edge::Create($edge));
+            $that->create(Base::Undirected($edge, $edge));
         }
 
         return $that;
     }
 
     /**
-     * @param Edge $edge
+     * @param Base $edge
      */
-    public function add(Edge $edge)
+    public function create(Base $edge)
     {
         $this->container->add($edge);
     }
