@@ -3,34 +3,30 @@
 namespace Ing200086\Reto\Edge\Factory;
 
 use Ing200086\Reto\Edge\Base;
-use Ing200086\Reto\Vertex\Collection;
+use Ing200086\Reto\Edge\Core\EndPoints;
+use Ing200086\Reto\Vertex\Collection as VertexCollection;
 
-abstract class EdgeFactory implements EdgeBuilderInterface, BuildableInterface {
-    protected $_source;
-    protected $_destination;
-
+abstract class EdgeFactory extends EndPoints implements BuildableInterface {
     public function __construct(string $source, string $destination)
     {
         $this->_source = $source;
         $this->_destination = $destination;
     }
 
-    public abstract static function Create(string $source, string $destination);
-
-    public abstract function build(Collection $vertices) : Base;
-
-    public function source() : string
+    public static function Create(string $source, string $destination)
     {
-        return $this->_source;
+        return new static ($source, $destination);
     }
 
-    public function destination() : string
-    {
-        return $this->_destination;
-    }
+    protected abstract function edgeProvider() : Base;
 
-    public function isValid(Collection $vertices)
+    public function build(VertexCollection $vertex) : Base
     {
-        return ($vertices->has($this->_source) && $vertices->has($this->_destination));
+        $edge = $this->edgeProvider();
+
+        if ($edge->isValid($vertex))
+        {
+            return $edge;
+        }
     }
 }

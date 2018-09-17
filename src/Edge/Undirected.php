@@ -2,10 +2,16 @@
 
 namespace Ing200086\Reto\Edge;
 
+/**
+ * Class Undirected
+ *
+ * @package Ing200086\Reto\Edge
+ */
 class Undirected extends Base {
-
-
-    public static function Delimiter()
+    /**
+     * @return string
+     */
+    protected function delimiter() : string
     {
         return '<>';
     }

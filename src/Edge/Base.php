@@ -3,31 +3,49 @@
 namespace Ing200086\Reto\Edge;
 
 use Ing200086\Envase\Interfaces\EntityInterface;
-use Ing200086\Reto\Edge\Factory\EdgeBuilderInterface;
+use Ing200086\Reto\Edge\Core\EndPointsInterface;
 use Ing200086\Reto\Vertex\Collection as VertexCollection;
 
+/**
+ * Class Base
+ *
+ * @package Ing200086\Reto\Edge
+ */
 abstract class Base implements EntityInterface {
     protected $_source;
     protected $_destination;
 
-    public function __construct(EdgeBuilderInterface $builder)
+    public function __construct(EndPointsInterface $endPoints)
     {
-        $this->_source = $builder->source();
-        $this->_destination = $builder->destination();
+        $this->_source = $endPoints->source();
+        $this->_destination = $endPoints->destination();
     }
 
-    public static function Create(EdgeBuilderInterface $builder)
+    /**
+     * @param EndPointsInterface $endPoints
+     * @return Base
+     */
+    public static function Create(EndPointsInterface $endPoints)
     {
-        return new static($builder);
+        return new static($endPoints);
     }
 
+    /**
+     * @param VertexCollection $vertices
+     * @return bool
+     */
     public function isValid(VertexCollection $vertices)
     {
         return ($vertices->has($this->_source) && $vertices->has($this->_destination));
     }
 
+    protected abstract function delimiter() : string;
+
+    /**
+     * @return string
+     */
     public function getId() : string
     {
-        return $this->_source . static::Delimiter() . $this->_destination;
+        return $this->_source . $this->delimiter() . $this->_destination;
     }
 }

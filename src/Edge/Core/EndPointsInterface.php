@@ -1,8 +1,8 @@
 <?php
 
-namespace Ing200086\Reto\Edge\Factory;
+namespace Ing200086\Reto\Edge\Core;
 
-interface EdgeBuilderInterface {
+interface EndPointsInterface {
     public function source() : string;
 
     public function destination() : string;

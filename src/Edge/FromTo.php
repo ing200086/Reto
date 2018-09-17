@@ -2,8 +2,16 @@
 
 namespace Ing200086\Reto\Edge;
 
+/**
+ * Class FromTo
+ *
+ * @package Ing200086\Reto\Edge
+ */
 class FromTo extends Base {
-    public static function Delimiter()
+    /**
+     * @return string
+     */
+    protected function delimiter() : string
     {
         return '->';
     }

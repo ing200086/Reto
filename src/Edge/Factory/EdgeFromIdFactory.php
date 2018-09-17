@@ -3,7 +3,7 @@
 namespace Ing200086\Reto\Edge\Factory;
 
 class EdgeFromIdFactory {
-    public static function Create(string $json)
+    public static function Create(string $json) : BuildableInterface
     {
         $attributes = static::ParseJSON($json);
 
