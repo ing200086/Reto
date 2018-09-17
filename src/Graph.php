@@ -37,7 +37,7 @@ class Graph {
 
     public function define(EdgeBuilderInterface $edgeCreator)
     {
-        $this->_edges->create($edgeCreator->build($this->vertices()));
+        $this->_edges->create($edgeCreator, $this->vertices());
     }
 
     public function vertices()

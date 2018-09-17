@@ -5,7 +5,7 @@ namespace Ing200086\Reto\Edge\Factory;
 use Ing200086\Reto\Edge\Base;
 use Ing200086\Reto\Vertex\Collection;
 
-abstract class EdgeFactory implements EdgeBuilderInterface {
+abstract class EdgeFactory implements EdgeBuilderInterface, BuildableInterface {
     protected $_source;
     protected $_destination;
 
@@ -13,32 +13,6 @@ abstract class EdgeFactory implements EdgeBuilderInterface {
     {
         $this->_source = $source;
         $this->_destination = $destination;
-    }
-
-    public static function FromJSON(string $json)
-    {
-        $attributes = static::ParseJSON($json);
-        
-        switch ( $attributes['delimiter'] )
-        {
-            case '<>':
-                return UndirectedFactory::Create($attributes['source'], $attributes['destination']);
-                break;
-            case '->':
-                return FromToFactory::Create($attributes['source'], $attributes['destination']);
-                break;
-            case '<-':
-                return ToFromFactory::Create($attributes['source'], $attributes['destination']);
-                break;
-        }
-    }
-
-    public static function ParseJSON(string $id) : array
-    {
-        $pattern = '/(?P<source>[\w\d]+)' . '(?P<delimiter><>|->|<-)' . '(?P<destination>[\w\d]+)/';
-        preg_match($pattern, $id, $matches);
-
-        return $matches;
     }
 
     public abstract static function Create(string $source, string $destination);

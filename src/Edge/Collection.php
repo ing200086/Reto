@@ -3,7 +3,10 @@
 namespace Ing200086\Reto\Edge;
 
 use Ing200086\Envase\EntityContainer;
+use Ing200086\Reto\Edge\Factory\BuildableInterface;
 use Ing200086\Reto\Edge\Factory\EdgeFactory;
+use Ing200086\Reto\Edge\Factory\EdgeFromIdFactory;
+use Ing200086\Reto\Vertex\Collection as VertexCollection;
 
 class Collection implements \Countable {
     protected $container;
@@ -13,30 +16,21 @@ class Collection implements \Countable {
         $this->container = EntityContainer::Create();
     }
 
-    /**
-     * @param array                             $edges
-     * @param \Ing200086\Reto\Vertex\Collection $vertices
-     * @return Collection
-     * @throws \Exception
-     */
-    public static function FromArray(array $edges, \Ing200086\Reto\Vertex\Collection $vertices)
+    public static function FromArray(array $edges, VertexCollection $vertices)
     {
         $that = new static();
 
         foreach ( $edges as $edge )
         {
-        $that->create(EdgeFactory::FromJSON($edge)->build($vertices));
+        $that->create(EdgeFromIdFactory::Create($edge), $vertices);
         }
 
         return $that;
     }
 
-    /**
-     * @param Base $edge
-     */
-    public function create(Base $edge)
+    public function create(BuildableInterface $factory, VertexCollection $vertices)
     {
-        $this->container->add($edge);
+        $this->container->add($factory->build($vertices));
     }
 
     /**
