@@ -20,17 +20,6 @@ abstract class Base implements EntityInterface {
         return new static($builder);
     }
 
-    public static function isValidID(string $id, string &$source, string &$destination )
-    {
-        $pattern = '/(?P<source>[\w\d]+)' . static::Delimiter() . '(?P<destination>[\w\d]+)/';
-        preg_match($pattern, $id, $matches);
-
-        $source = $matches['source'];
-        $destination = $matches['destination'];
-
-        return ($matches <> []);
-    }
-
     public function getId() : string
     {
         return $this->_source . static::Delimiter() . $this->_destination;

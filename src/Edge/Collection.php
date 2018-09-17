@@ -3,7 +3,7 @@
 namespace Ing200086\Reto\Edge;
 
 use Ing200086\Envase\EntityContainer;
-use Ing200086\Reto\Edge\Factory\NewEdge;
+use Ing200086\Reto\Edge\Factory\EdgeFactory;
 
 class Collection implements \Countable {
     protected $container;
@@ -25,7 +25,7 @@ class Collection implements \Countable {
 
         foreach ( $edges as $edge )
         {
-            $that->create(NewEdge::FromId($edge)->build($vertices));
+        $that->create(EdgeFactory::FromJSON($edge)->build($vertices));
         }
 
         return $that;
