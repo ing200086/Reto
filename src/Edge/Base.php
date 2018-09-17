@@ -3,35 +3,36 @@
 namespace Ing200086\Reto\Edge;
 
 use Ing200086\Envase\Interfaces\EntityInterface;
+use Ing200086\Reto\Edge\Factory\EdgeBuilderInterface;
 
-class Base implements EntityInterface {
+abstract class Base implements EntityInterface {
     protected $_source;
     protected $_destination;
-    protected $_delimiter;
 
-    public function __construct(string $source, string $destination, string $delimiter)
+    public function __construct(EdgeBuilderInterface $builder)
     {
-        $this->_source = $source;
-        $this->_destination = $destination;
+        $this->_source = $builder->source();
+        $this->_destination = $builder->destination();
     }
 
-    public static function Undirected(NewEdge $builder)
+    public static function Create(EdgeBuilderInterface $builder)
     {
-        return new static($builder->source(), $builder->destination(), '<>');
+        return new static($builder);
     }
 
-    public static function FromTo(NewEdge $builder)
+    public static function isValidID(string $id, string &$source, string &$destination )
     {
-        return new static($builder->source(), $builder->destination(), '->');
-    }
+        $pattern = '/(?P<source>[\w\d]+)' . static::Delimiter() . '(?P<destination>[\w\d]+)/';
+        preg_match($pattern, $id, $matches);
 
-    public static function ToFrom(NewEdge $builder)
-    {
-        return new static($builder->source(), $builder->destination(), '<-');
+        $source = $matches['source'];
+        $destination = $matches['destination'];
+
+        return ($matches <> []);
     }
 
     public function getId() : string
     {
-        return $this->_source . $this->_delimiter . $this->_destination;
+        return $this->_source . static::Delimiter() . $this->_destination;
     }
 }

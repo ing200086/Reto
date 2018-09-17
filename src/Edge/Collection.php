@@ -3,7 +3,7 @@
 namespace Ing200086\Reto\Edge;
 
 use Ing200086\Envase\EntityContainer;
-//use Ing200086\Reto\Edge\Base;
+use Ing200086\Reto\Edge\Factory\NewEdge;
 
 class Collection implements \Countable {
     protected $container;

@@ -3,7 +3,7 @@
 namespace Ing200086\Reto;
 
 use Ing200086\Reto\Edge\Collection as EdgeCollection;
-use Ing200086\Reto\Edge\NewEdge;
+use Ing200086\Reto\Edge\Factory\EdgeBuilderInterface;
 use Ing200086\Reto\Vertex\Collection as VertexCollection;
 
 class Graph {
@@ -35,7 +35,7 @@ class Graph {
         return $this->_edges;
     }
 
-    public function define(NewEdge $edgeCreator)
+    public function define(EdgeBuilderInterface $edgeCreator)
     {
         $this->_edges->create($edgeCreator->build($this->vertices()));
     }

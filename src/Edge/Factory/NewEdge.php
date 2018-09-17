@@ -1,10 +1,14 @@
 <?php
 
-namespace Ing200086\Reto\Edge;
+namespace Ing200086\Reto\Edge\Factory;
 
+use Ing200086\Reto\Edge\Base;
+use Ing200086\Reto\Edge\FromTo;
+use Ing200086\Reto\Edge\ToFrom;
+use Ing200086\Reto\Edge\Undirected;
 use Ing200086\Reto\Vertex\Collection;
 
-class NewEdge {
+class NewEdge implements EdgeBuilderInterface {
     protected $_edge;
     protected $_source;
     protected $_destination;
@@ -17,17 +21,17 @@ class NewEdge {
 
     public static function FromId(string $id)
     {
-        if (stristr($id, "<>")) {
-            $source = strtok($id, "<>");
-            $destination = strtok("<>");
+        $source = '';
+        $destination = '';
+
+        if ( Undirected::isValidID($id, $source, $destination) )
+        {
             return static::Undirected($source, $destination);
-        } elseif (stristr($id, "->")) {
-            $source = strtok($id, "->");
-            $destination = strtok("->");
+        } elseif ( FromTo::isValidID($id, $source, $destination) )
+        {
             return static::FromTo($source, $destination);
-        } elseif (stristr($id, "<-")) {
-            $source = strtok($id, "<-");
-            $destination = strtok("<-");
+        } elseif ( ToFrom::isValidID($id, $source, $destination) )
+        {
             return static::ToFrom($source, $destination);
         }
     }
@@ -35,23 +39,7 @@ class NewEdge {
     public static function Undirected(string $source, string $destination)
     {
         $that = new static ($source, $destination);
-        $that->setEdge(Base::Undirected($that));
-
-        return $that;
-    }
-
-    public static function FromTo(string $source, string $destination)
-    {
-        $that = new static ($source, $destination);
-        $that->setEdge(Base::FromTo($that));
-
-        return $that;
-    }
-
-    public static function ToFrom(string $source, string $destination)
-    {
-        $that = new static ($source, $destination);
-        $that->setEdge(Base::ToFrom($that));
+        $that->setEdge(Undirected::Create($that));
 
         return $that;
     }
@@ -61,17 +49,33 @@ class NewEdge {
         $this->_edge = $edge;
     }
 
-    public function source()
+    public static function FromTo(string $source, string $destination)
+    {
+        $that = new static ($source, $destination);
+        $that->setEdge(FromTo::Create($that));
+
+        return $that;
+    }
+
+    public static function ToFrom(string $source, string $destination)
+    {
+        $that = new static ($source, $destination);
+        $that->setEdge(ToFrom::Create($that));
+
+        return $that;
+    }
+
+    public function source() : string
     {
         return $this->_source;
     }
 
-    public function destination()
+    public function destination() : string
     {
         return $this->_destination;
     }
 
-    public function build(Collection $vertices)
+    public function build(Collection $vertices) : Base
     {
         if ( ! $this->isValid($vertices) )
         {

@@ -2,8 +2,8 @@
 
 namespace Ing200086\Reto\Tests\Feature;
 
+use Ing200086\Reto\Edge\Factory\NewEdge;
 use Ing200086\Reto\Graph;
-use Ing200086\Reto\Edge\NewEdge;
 use PHPUnit\Framework\TestCase;
 
 class GraphEdgeTest extends TestCase {
