@@ -3,7 +3,7 @@
 namespace Ing200086\Reto\Tests\Feature;
 
 use Ing200086\Reto\Graph;
-use Ing200086\Reto\Vertex\Single as Vertex;
+use Ing200086\Reto\Single;
 use PHPUnit\Framework\TestCase;
 
 class GraphTest extends TestCase {
@@ -32,7 +32,7 @@ class GraphTest extends TestCase {
     {
         $this->assertFalse($this->graph->vertices()->has('d'));
 
-        $this->graph->vertices()->add(Vertex::Create('d'));
+        $this->graph->vertices()->add(Single::Create('d'));
 
         $this->assertTrue($this->graph->vertices()->has('d'));
     }

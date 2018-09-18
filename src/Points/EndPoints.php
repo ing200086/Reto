@@ -1,12 +1,10 @@
 <?php
 
-namespace Ing200086\Reto\Edge\Core;
+namespace Ing200086\Reto\Points;
 
-/**
- * Class EndPoints
- *
- * @package Ing200086\Reto\Edge\Core
- */
+use Ing200086\Reto\Interfaces\EndPointsInterface;
+use Ing200086\Reto\Interfaces\SealedVertexCollectionInterface;
+
 class EndPoints implements EndPointsInterface {
     protected $_source;
     protected $_destination;
@@ -36,5 +34,10 @@ class EndPoints implements EndPointsInterface {
     public function destination() : string
     {
         return $this->_destination;
+    }
+
+    public function isValid(SealedVertexCollectionInterface $vertices) : bool
+    {
+        return ($vertices->has($this->_source) && $vertices->has($this->_destination));
     }
 }

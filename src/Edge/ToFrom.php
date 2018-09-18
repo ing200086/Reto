@@ -2,17 +2,19 @@
 
 namespace Ing200086\Reto\Edge;
 
+use Ing200086\Reto\Interfaces\EdgeInterface;
+
 /**
  * Class ToFrom
  *
  * @package Ing200086\Reto\Edge
  */
-class ToFrom extends Base {
+class ToFrom extends Base implements EdgeInterface {
     /**
      * @return string
      */
-    protected function delimiter() : string
+    public function getId() : string
     {
-        return '<-';
+        return $this->_points->source() . '<-' . $this->_points->destination();
     }
 }

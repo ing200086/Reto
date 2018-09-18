@@ -1,6 +1,6 @@
 <?php
 
-namespace Ing200086\Reto\Factory;
+namespace Ing200086\Reto\Interfaces;
 
 interface GraphFactoryInterface {
     public function vertices();

@@ -1,11 +1,13 @@
 <?php
 
-namespace Ing200086\Reto\Vertex;
+namespace Ing200086\Reto;
 
 use Ing200086\Envase\EntityContainer;
 use Ing200086\Envase\Interfaces\EntityContainerInterface;
+use Ing200086\Reto\Interfaces\SealedVertexCollectionInterface;
+use Ing200086\Reto\Interfaces\VertexInterface;
 
-class SealedCollection implements \Countable {
+class SealedCollection implements SealedVertexCollectionInterface {
     /**
      * @var EntityContainerInterface
      */
@@ -16,26 +18,17 @@ class SealedCollection implements \Countable {
         $this->container = EntityContainer::Create();
     }
 
-    public static function CreateNew()
+    public static function CreateNew() : SealedVertexCollectionInterface
     {
         return new static();
     }
 
-    /**
-     * @param string $id
-     * @return Single
-     * @throws \Ing200086\Envase\Exception\NotFoundException
-     */
-    public function find(string $id) : Single
+    public function find(string $id) : VertexInterface
     {
         return $this->container->get($id);
     }
 
-    /**
-     * @param string $id
-     * @return bool
-     */
-    public function has(string $id)
+    public function has(string $id) : bool
     {
         return $this->container->has($id);
     }

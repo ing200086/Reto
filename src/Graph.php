@@ -2,17 +2,14 @@
 
 namespace Ing200086\Reto;
 
-use Ing200086\Reto\Edge\Base;
-use Ing200086\Reto\Edge\Collection as EdgeCollection;
-use Ing200086\Reto\Factory\EmptyGraphFactory;
-use Ing200086\Reto\Factory\GraphFactoryInterface;
-use Ing200086\Reto\Vertex\Collection as VertexCollection;
+use Ing200086\Reto\Interfaces\EdgeInterface;
+use Ing200086\Reto\Interfaces\GraphFactoryInterface;
 
 class Graph {
     protected $_vertices;
     protected $_edges;
 
-    public function __construct(VertexCollection $vertices, EdgeCollection $edges)
+    public function __construct(Vertices $vertices, Edges $edges)
     {
         $this->_vertices = $vertices;
         $this->_edges = $edges;
@@ -31,7 +28,7 @@ class Graph {
         return $this->_edges;
     }
 
-    public function define(Base $edge)
+    public function define(EdgeInterface $edge)
     {
         $this->_edges->create($edge, $this->vertices());
     }

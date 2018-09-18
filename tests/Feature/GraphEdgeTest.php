@@ -2,7 +2,7 @@
 
 namespace Ing200086\Reto\Tests\Feature;
 
-use Ing200086\Reto\Edge\Core\EndPoints;
+use Ing200086\Reto\Points\EndPoints;
 use Ing200086\Reto\Edge\FromTo;
 use Ing200086\Reto\Edge\ToFrom;
 use Ing200086\Reto\Edge\Undirected;

@@ -3,9 +3,9 @@
 namespace Ing200086\Reto\Tests\Feature;
 
 use Ing200086\Reto\Graph;
-use Ing200086\Reto\Edge\Collection as EdgeCollection;
-use Ing200086\Reto\Factory\JsonGraphFactory;
-use Ing200086\Reto\Vertex\Collection as VertexCollection;
+use Ing200086\Reto\Edges as EdgeCollection;
+use Ing200086\Reto\Tests\Stubs\JsonGraphFactory;
+use Ing200086\Reto\Vertices as VertexCollection;
 use PHPUnit\Framework\TestCase;
 
 class GraphBuildTest extends TestCase {
@@ -15,7 +15,7 @@ class GraphBuildTest extends TestCase {
      */
     public function it_can_be_made_from_json($filename, $vertex, $edge)
     {
-        $config = JsonGraphFactory::Create($filename);
+        $config = JsonGraphFactory::Create($filename, './tests/Config');
         $graph = Graph::Create($config);
 
         $this->assertInstanceOf(VertexCollection::class, $graph->vertices());

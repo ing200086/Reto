@@ -1,15 +1,13 @@
 <?php
 
-namespace Ing200086\Reto\Vertex;
-
-use Ing200086\Reto\Vertex\Single as Vertex;
+namespace Ing200086\Reto;
 
 /**
  * Class VertexCollection
  *
  * @package Ing200086\Reto
  */
-class Collection extends SealedCollection {
+class Vertices extends SealedCollection {
     /**
      * @param string $id
      */
@@ -23,7 +21,7 @@ class Collection extends SealedCollection {
      */
     public function create(string $id)
     {
-        $this->container->add(Vertex::Create($id));
+        $this->container->add(Single::Create($id));
     }
 
     /**
