@@ -2,6 +2,8 @@
 
 namespace Ing200086\Reto\Vertices;
 
+use Ing200086\Reto\Interfaces\VertexInterface;
+use Ing200086\Reto\Interfaces\VerticesInterface;
 use Ing200086\Reto\Vertex\Single;
 
 /**
@@ -9,27 +11,18 @@ use Ing200086\Reto\Vertex\Single;
  *
  * @package Ing200086\Reto
  */
-class Vertices extends SealedVertices {
-    /**
-     * @param string $id
-     */
-    public function remove(string $id)
+class Vertices extends SealedVertices implements VerticesInterface {
+    public static function CreateNew() : VerticesInterface
+    {
+        return new static();
+    }
+
+    public function remove(string $id) : void
     {
         $this->container->remove($id);
     }
 
-    /**
-     * @param string $id
-     */
-    public function create(string $id)
-    {
-        $this->container->add(Single::Create($id));
-    }
-
-    /**
-     * @param Single $vertex
-     */
-    public function add(Single $vertex)
+    public function add(VertexInterface $vertex) : void
     {
         $this->container->add($vertex);
     }

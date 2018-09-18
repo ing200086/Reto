@@ -5,13 +5,14 @@ namespace Ing200086\Reto;
 use Ing200086\Reto\Edges\Edges;
 use Ing200086\Reto\Interfaces\EdgeInterface;
 use Ing200086\Reto\Interfaces\GraphFactoryInterface;
+use Ing200086\Reto\Interfaces\VerticesInterface;
 use Ing200086\Reto\Vertices\Vertices;
 
 class Graph {
     protected $_vertices;
     protected $_edges;
 
-    protected function __construct(Vertices $vertices, Edges $edges)
+    protected function __construct(VerticesInterface $vertices, Edges $edges)
     {
         $this->_vertices = $vertices;
         $this->_edges = $edges;

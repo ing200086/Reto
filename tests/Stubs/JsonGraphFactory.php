@@ -4,6 +4,7 @@ namespace Ing200086\Reto\Tests\Stubs;
 
 use Ing200086\Reto\Edges\Edges;
 use Ing200086\Reto\Interfaces\GraphFactoryInterface;
+use Ing200086\Reto\Interfaces\VerticesInterface;
 use Ing200086\Reto\Tests\Stubs\Edge\SimpleFactory;
 use Ing200086\Reto\Vertex\Single;
 use Ing200086\Reto\Vertices\Vertices;
@@ -56,7 +57,7 @@ class JsonGraphFactory implements GraphFactoryInterface {
         return new static($directory . '/' . $filename);
     }
 
-    public function vertices()
+    public function vertices() : VerticesInterface
     {
         return $this->_vertices;
     }

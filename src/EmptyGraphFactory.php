@@ -4,6 +4,7 @@ namespace Ing200086\Reto;
 
 use Ing200086\Reto\Edges\Edges;
 use Ing200086\Reto\Interfaces\GraphFactoryInterface;
+use Ing200086\Reto\Interfaces\VerticesInterface;
 use Ing200086\Reto\Vertices\Vertices;
 
 class EmptyGraphFactory implements GraphFactoryInterface {
@@ -12,7 +13,7 @@ class EmptyGraphFactory implements GraphFactoryInterface {
         return new static();
     }
 
-    public function vertices()
+    public function vertices() : VerticesInterface
     {
         return Vertices::CreateNew();
     }

@@ -37,22 +37,12 @@ class GraphTest extends TestCase {
         $this->assertTrue($this->graph->vertices()->has('d'));
     }
 
-    /** @test */
-    public function it_can_have_a_vertex_get_added_on_the_fly()
-    {
-        $this->assertFalse($this->graph->vertices()->has('d'));
-
-        $this->graph->vertices()->create('d');
-
-        $this->assertTrue($this->graph->vertices()->has('d'));
-    }
-
     protected function setUp()
     {
         parent::setUp();
         $this->graph = Graph::Create();
-        $this->graph->vertices()->create('a');
-        $this->graph->vertices()->create('b');
-        $this->graph->vertices()->create('c');
+        $this->graph->vertices()->add(Single::Create('a'));
+        $this->graph->vertices()->add(Single::Create('b'));
+        $this->graph->vertices()->add(Single::Create('c'));
     }
 }

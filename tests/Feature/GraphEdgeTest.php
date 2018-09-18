@@ -7,6 +7,7 @@ use Ing200086\Reto\Edge\FromTo;
 use Ing200086\Reto\Edge\ToFrom;
 use Ing200086\Reto\Edge\Undirected;
 use Ing200086\Reto\Graph;
+use Ing200086\Reto\Vertex\Single;
 use PHPUnit\Framework\TestCase;
 
 class GraphEdgeTest extends TestCase {
@@ -26,8 +27,8 @@ class GraphEdgeTest extends TestCase {
     {
         parent::setUp();
         $this->graph = Graph::Create();
-        $this->graph->vertices()->create('a');
-        $this->graph->vertices()->create('b');
-        $this->graph->vertices()->create('c');
+        $this->graph->vertices()->add(Single::Create('a'));
+        $this->graph->vertices()->add(Single::Create('b'));
+        $this->graph->vertices()->add(Single::Create('c'));
     }
 }

@@ -6,6 +6,7 @@ use Ing200086\Envase\EntityContainer;
 use Ing200086\Envase\Interfaces\EntityContainerInterface;
 use Ing200086\Reto\Interfaces\SealedVerticesInterface;
 use Ing200086\Reto\Interfaces\VertexInterface;
+use Ing200086\Reto\Interfaces\VerticesInterface;
 
 class SealedVertices implements SealedVerticesInterface {
     /**
@@ -16,11 +17,6 @@ class SealedVertices implements SealedVerticesInterface {
     public function __construct(EntityContainerInterface $container = null)
     {
         $this->container = ($container) ?? EntityContainer::Create();
-    }
-
-    public static function CreateNew() : SealedVerticesInterface
-    {
-        return new static();
     }
 
     public function find(string $id) : VertexInterface
