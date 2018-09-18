@@ -1,13 +1,15 @@
 <?php
 
-namespace Ing200086\Reto;
+namespace Ing200086\Reto\Vertices;
+
+use Ing200086\Reto\Vertex\Single;
 
 /**
  * Class VertexCollection
  *
  * @package Ing200086\Reto
  */
-class Vertices extends SealedCollection {
+class Vertices extends SealedVertices {
     /**
      * @param string $id
      */

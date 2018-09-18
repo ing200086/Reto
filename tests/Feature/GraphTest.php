@@ -3,7 +3,7 @@
 namespace Ing200086\Reto\Tests\Feature;
 
 use Ing200086\Reto\Graph;
-use Ing200086\Reto\Single;
+use Ing200086\Reto\Vertex\Single;
 use PHPUnit\Framework\TestCase;
 
 class GraphTest extends TestCase {

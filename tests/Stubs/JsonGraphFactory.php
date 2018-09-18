@@ -2,11 +2,11 @@
 
 namespace Ing200086\Reto\Tests\Stubs;
 
-use Ing200086\Reto\Edges as EdgeCollection;
+use Ing200086\Reto\Edges\Edges;
 use Ing200086\Reto\Interfaces\GraphFactoryInterface;
 use Ing200086\Reto\Tests\Stubs\Edge\SimpleFactory;
-use Ing200086\Reto\Vertices as VertexCollection;
-use Ing200086\Reto\Single;
+use Ing200086\Reto\Vertex\Single;
+use Ing200086\Reto\Vertices\Vertices;
 
 class JsonGraphFactory implements GraphFactoryInterface {
     protected $_vertices;
@@ -30,7 +30,7 @@ class JsonGraphFactory implements GraphFactoryInterface {
 
     protected function populateVertices(array $vertices)
     {
-        $this->_vertices = VertexCollection::CreateNew();
+        $this->_vertices = Vertices::CreateNew();
         foreach ( $vertices as $vertex )
         {
             $this->_vertices->add(Single::Create($vertex));
@@ -44,7 +44,7 @@ class JsonGraphFactory implements GraphFactoryInterface {
 
     protected function populateEdges(array $edges)
     {
-        $this->_edges = EdgeCollection::CreateNew();
+        $this->_edges = Edges::CreateNew();
         foreach ( $edges as $edge )
         {
             $this->_edges->create($this->_edgeFactory->getEdge($edge), $this->_vertices);

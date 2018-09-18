@@ -1,24 +1,24 @@
 <?php
 
-namespace Ing200086\Reto;
+namespace Ing200086\Reto\Vertices;
 
 use Ing200086\Envase\EntityContainer;
 use Ing200086\Envase\Interfaces\EntityContainerInterface;
-use Ing200086\Reto\Interfaces\SealedVertexCollectionInterface;
+use Ing200086\Reto\Interfaces\SealedVerticesInterface;
 use Ing200086\Reto\Interfaces\VertexInterface;
 
-class SealedCollection implements SealedVertexCollectionInterface {
+class SealedVertices implements SealedVerticesInterface {
     /**
      * @var EntityContainerInterface
      */
     protected $container;
 
-    public function __construct()
+    public function __construct(EntityContainerInterface $container = null)
     {
-        $this->container = EntityContainer::Create();
+        $this->container = ($container) ?? EntityContainer::Create();
     }
 
-    public static function CreateNew() : SealedVertexCollectionInterface
+    public static function CreateNew() : SealedVerticesInterface
     {
         return new static();
     }

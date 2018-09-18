@@ -1,6 +1,6 @@
 <?php
 
-namespace Ing200086\Reto;
+namespace Ing200086\Reto\Vertex;
 
 use Ing200086\Reto\Interfaces\VertexInterface;
 

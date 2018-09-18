@@ -7,5 +7,5 @@ interface EndPointsInterface {
 
     public function destination() : string;
 
-    public function isValid(SealedVertexCollectionInterface $vertices) : bool;
+    public function isValid(SealedVerticesInterface $vertices) : bool;
 }

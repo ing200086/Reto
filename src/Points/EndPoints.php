@@ -3,7 +3,7 @@
 namespace Ing200086\Reto\Points;
 
 use Ing200086\Reto\Interfaces\EndPointsInterface;
-use Ing200086\Reto\Interfaces\SealedVertexCollectionInterface;
+use Ing200086\Reto\Interfaces\SealedVerticesInterface;
 
 class EndPoints implements EndPointsInterface {
     protected $_source;
@@ -36,7 +36,7 @@ class EndPoints implements EndPointsInterface {
         return $this->_destination;
     }
 
-    public function isValid(SealedVertexCollectionInterface $vertices) : bool
+    public function isValid(SealedVerticesInterface $vertices) : bool
     {
         return ($vertices->has($this->_source) && $vertices->has($this->_destination));
     }
