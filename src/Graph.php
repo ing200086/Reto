@@ -17,10 +17,16 @@ class Graph {
     }
 
 
-    public static function FromJson(array $json)
+    public static function Create(GraphFactoryInterface $factory = null)
     {
-        $vertices = VertexCollection::FromArray(self::indexOrEmpty($json, 'vertices'));
-        $edges = EdgeCollection::FromArray(self::indexOrEmpty($json, 'edges'), $vertices);
+        if (! $factory)
+        {
+            $vertices = VertexCollection::FromArray([]);
+            $edges = EdgeCollection::FromArray([], $vertices);
+        } else {
+            $vertices = $factory->vertices();
+            $edges = $factory->edges();
+        }
 
         return new static($vertices, $edges);
     }
