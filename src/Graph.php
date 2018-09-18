@@ -2,8 +2,10 @@
 
 namespace Ing200086\Reto;
 
+use Ing200086\Reto\Edge\Base;
 use Ing200086\Reto\Edge\Collection as EdgeCollection;
-use Ing200086\Reto\Edge\Factory\EdgeFactory;
+use Ing200086\Reto\Factory\EmptyGraphFactory;
+use Ing200086\Reto\Factory\GraphFactoryInterface;
 use Ing200086\Reto\Vertex\Collection as VertexCollection;
 
 class Graph {
@@ -19,21 +21,9 @@ class Graph {
 
     public static function Create(GraphFactoryInterface $factory = null)
     {
-        if (! $factory)
-        {
-            $vertices = VertexCollection::FromArray([]);
-            $edges = EdgeCollection::FromArray([], $vertices);
-        } else {
-            $vertices = $factory->vertices();
-            $edges = $factory->edges();
-        }
+        $factory = ($factory) ?? EmptyGraphFactory::Create();
 
-        return new static($vertices, $edges);
-    }
-
-    protected static function indexOrEmpty(array $source, $index)
-    {
-        return (isset($source[$index])) ? $source[$index] : [];
+        return new static($factory->vertices(), $factory->edges());
     }
 
     public function edges()
@@ -41,9 +31,9 @@ class Graph {
         return $this->_edges;
     }
 
-    public function define(EdgeFactory $edgeCreator)
+    public function define(Base $edge)
     {
-        $this->_edges->create($edgeCreator, $this->vertices());
+        $this->_edges->create($edge, $this->vertices());
     }
 
     public function vertices()

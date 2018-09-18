@@ -16,20 +16,9 @@ class SealedCollection implements \Countable {
         $this->container = EntityContainer::Create();
     }
 
-    /**
-     * @param array $vertices
-     * @return Collection
-     */
-    public static function FromArray(array $vertices)
+    public static function CreateNew()
     {
-        $that = new static();
-
-        foreach ( $vertices as $vertex )
-        {
-            $that->add(Single::Create($vertex));
-        }
-
-        return $that;
+        return new static();
     }
 
     /**
@@ -57,13 +46,5 @@ class SealedCollection implements \Countable {
     public function count() : int
     {
         return $this->container->count();
-    }
-
-    /**
-     * @return array
-     */
-    public function toArray()
-    {
-        return $this->container->toArray();
     }
 }

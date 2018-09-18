@@ -4,7 +4,7 @@ namespace Ing200086\Reto\Tests\Feature;
 
 use Ing200086\Reto\Graph;
 use Ing200086\Reto\Edge\Collection as EdgeCollection;
-use Ing200086\Reto\Tests\Config\JsonGraphFactory;
+use Ing200086\Reto\Factory\JsonGraphFactory;
 use Ing200086\Reto\Vertex\Collection as VertexCollection;
 use PHPUnit\Framework\TestCase;
 

@@ -2,13 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97c3402d-56fe-45fc-b36e-a560c31dc85b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/GraphFactoryInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Config/JsonGraphFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Factory/EmptyGraphFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Factory/JsonGraphFactory.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Edge/Collection.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Edge/Collection.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Edge/Core/EndPoints.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Edge/Core/EndPoints.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Edge/Factory/BuildableInterface.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Edge/Factory/EdgeFactory.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Edge/Factory/EdgeFromIdFactory.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Edge/Factory/FromToFactory.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Edge/Factory/ToFromFactory.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Edge/Factory/UndirectedFactory.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Graph.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graph.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GraphFactoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Factory/GraphFactoryInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Vertex/SealedCollection.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vertex/SealedCollection.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Config/JsonGraphFactory.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/Feature/GraphBuildTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/GraphBuildTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/Feature/GraphEdgeTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/GraphEdgeTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/GraphTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/GraphTest.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -125,14 +135,14 @@
           <entry key="dummy" value="59" />
           <entry key="gitignore" value="2" />
           <entry key="json" value="39" />
-          <entry key="php" value="11302" />
+          <entry key="php" value="12379" />
           <entry key="txt" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="39" />
-          <entry key="PHP" value="11302" />
+          <entry key="PHP" value="12379" />
           <entry key="PLAIN_TEXT" value="72" />
           <entry key="XML" value="2" />
         </counts>
@@ -142,20 +152,20 @@
           <entry key="dist" value="2" />
           <entry key="gitignore" value="2" />
           <entry key="json" value="4" />
-          <entry key="php" value="167" />
+          <entry key="php" value="185" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JSON" value="4" />
-          <entry key="PHP" value="167" />
+          <entry key="PHP" value="185" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="XML" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.php.new.class">
         <counts>
-          <entry key="PHP Class.type" value="14" />
+          <entry key="PHP Class.type" value="15" />
           <entry key="PHP Interface.type" value="3" />
         </counts>
       </usages-collector>
@@ -173,75 +183,31 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Vertex/Collection.php">
+        <entry file="file://$PROJECT_DIR$/src/Edge/Base.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Vertex/SealedCollection.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="582">
+              <caret line="41" column="53" selection-start-line="41" selection-start-column="53" selection-end-line="41" selection-end-column="53" />
               <folding>
-                <element signature="e#41#78#0#PHP" expanded="true" />
+                <element signature="e#39#87#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Edge/Factory/FromToFactory.php">
+        <entry file="file://$PROJECT_DIR$/src/Factory/JsonGraphFactory.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="12" column="41" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
-              <folding>
-                <element signature="e#47#76#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GraphFactoryInterface.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+            <state relative-caret-position="189">
+              <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tests/Config/JsonGraphFactory.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="34" column="23" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
-              <folding>
-                <element signature="e#47#88#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/composer.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/Feature/GraphBuildTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
-              <folding>
-                <element signature="e#48#73#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="126">
+              <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -249,23 +215,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/Feature/GraphEdgeTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="567">
-              <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="29" selection-end-column="46" />
+            <state relative-caret-position="399">
+              <caret line="19" column="35" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
               <folding>
-                <element signature="e#48#94#0#PHP" expanded="true" />
+                <element signature="e#48#87#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/Feature/GraphTest.php">
+        <entry file="file://$PROJECT_DIR$/src/Edge/Core/EndPoints.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="687">
-              <caret line="56" column="5" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
-              <folding>
-                <element signature="e#48#73#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="399">
+              <caret line="21" column="49" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Edge/Undirected.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="273">
+              <caret line="13" column="43" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -273,10 +245,43 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Graph.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="567">
-              <caret line="27" column="39" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
+            <state relative-caret-position="588">
+              <caret line="31" column="37" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="37" />
               <folding>
-                <element signature="e#34#87#0#PHP" expanded="true" />
+                <element signature="e#34#63#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Factory/EmptyGraphFactory.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+              <folding>
+                <element signature="e#34#91#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Factory/GraphFactoryInterface.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="63">
+              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Edge/Collection.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="525">
+              <caret line="25" column="9" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
+              <folding>
+                <element signature="e#39#76#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -324,27 +329,31 @@
         <option value="$PROJECT_DIR$/src/Edge/Factory/NewEdge.php" />
         <option value="$PROJECT_DIR$/src/Edge/Factory/BuildableInterface.php" />
         <option value="$PROJECT_DIR$/src/Edge/Factory/EdgeBuilderInterface.php" />
-        <option value="$PROJECT_DIR$/src/Edge/Factory/EdgeFromIdFactory.php" />
         <option value="$PROJECT_DIR$/src/Vertex/Single.php" />
         <option value="$PROJECT_DIR$/src/Edge/Factory/FromToFactory.php" />
         <option value="$PROJECT_DIR$/src/Edge/Factory/ToFromFactory.php" />
         <option value="$PROJECT_DIR$/src/Edge/Factory/UndirectedFactory.php" />
-        <option value="$PROJECT_DIR$/src/Edge/Collection.php" />
         <option value="$PROJECT_DIR$/src/Vertex/Collection.php" />
-        <option value="$PROJECT_DIR$/src/Vertex/SealedCollection.php" />
         <option value="$PROJECT_DIR$/src/Edge/Core/EndPointsInterface.php" />
         <option value="$PROJECT_DIR$/src/Edge/Factory/EdgeFactory.php" />
         <option value="$PROJECT_DIR$/src/Edge/Base.php" />
         <option value="$PROJECT_DIR$/src/Edge/FromTo.php" />
         <option value="$PROJECT_DIR$/src/Edge/ToFrom.php" />
         <option value="$PROJECT_DIR$/src/Edge/Undirected.php" />
-        <option value="$PROJECT_DIR$/src/Edge/Core/EndPoints.php" />
         <option value="$PROJECT_DIR$/src/GraphFactoryInterface.php" />
-        <option value="$PROJECT_DIR$/tests/Config/JsonGraphFactory.php" />
-        <option value="$PROJECT_DIR$/tests/Feature/GraphBuildTest.php" />
-        <option value="$PROJECT_DIR$/src/Graph.php" />
-        <option value="$PROJECT_DIR$/tests/Feature/GraphEdgeTest.php" />
         <option value="$PROJECT_DIR$/tests/Feature/GraphTest.php" />
+        <option value="$PROJECT_DIR$/src/Edge/Factory/EdgeFromIdFactory.php" />
+        <option value="$PROJECT_DIR$/src/EmptyGraphFactory.php" />
+        <option value="$PROJECT_DIR$/src/Vertex/SealedCollection.php" />
+        <option value="$PROJECT_DIR$/src/Edge/Collection.php" />
+        <option value="$PROJECT_DIR$/src/Edge/Core/EndPoints.php" />
+        <option value="$PROJECT_DIR$/tests/Config/JsonGraphFactory.php" />
+        <option value="$PROJECT_DIR$/tests/Feature/GraphEdgeTest.php" />
+        <option value="$PROJECT_DIR$/src/Graph.php" />
+        <option value="$PROJECT_DIR$/src/Factory/EmptyGraphFactory.php" />
+        <option value="$PROJECT_DIR$/src/Factory/GraphFactoryInterface.php" />
+        <option value="$PROJECT_DIR$/src/Factory/JsonGraphFactory.php" />
+        <option value="$PROJECT_DIR$/tests/Feature/GraphBuildTest.php" />
       </list>
     </option>
   </component>
@@ -420,27 +429,7 @@
               <item name="Reto" type="b2602c69:ProjectViewProjectNode" />
               <item name="Reto" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Edge" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Reto" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Reto" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Edge" type="462c0819:PsiDirectoryNode" />
-              <item name="Core" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Reto" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Reto" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Edge" type="462c0819:PsiDirectoryNode" />
               <item name="Factory" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Reto" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Reto" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Vertex" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Reto" type="b2602c69:ProjectViewProjectNode" />
@@ -497,11 +486,11 @@
       <recent name="$PROJECT_DIR$/tests/Config" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Factory" />
+      <recent name="$PROJECT_DIR$/src/Vertex" />
       <recent name="$PROJECT_DIR$/src/Edge/Core" />
       <recent name="$PROJECT_DIR$/src/Edge/Factory" />
       <recent name="$PROJECT_DIR$/src/Edge" />
-      <recent name="$PROJECT_DIR$/src/Vertex" />
-      <recent name="$PROJECT_DIR$/tests/Config" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -533,7 +522,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47258000" />
+    <option name="totallyTimeSpent" value="49541000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
@@ -656,13 +645,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vertex/Single.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Edge/Factory/ToFromFactory.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -700,33 +682,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Edge/Factory/EdgeFromIdFactory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="68" selection-start-line="5" selection-start-column="68" selection-end-line="5" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Edge/Collection.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="36" column="21" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
-          <folding>
-            <element signature="e#39#76#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Edge/Base.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="582">
-          <caret line="41" column="53" selection-start-line="41" selection-start-column="53" selection-end-line="41" selection-end-column="53" />
-          <folding>
-            <element signature="e#39#87#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Edge/FromTo.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
@@ -741,17 +696,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Edge/Undirected.php">
+    <entry file="file://$PROJECT_DIR$/src/Edge/Factory/FromToFactory.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="13" column="43" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
+        <state relative-caret-position="252">
+          <caret line="12" column="41" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
+          <folding>
+            <element signature="e#47#76#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Edge/Core/EndPoints.php">
+    <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="21" column="7" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
+        <state relative-caret-position="460">
+          <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vertex/Single.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vertex/Collection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Feature/GraphTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="813">
+          <caret line="56" column="5" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
+          <folding>
+            <element signature="e#48#73#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Edge/Factory/EdgeFromIdFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vertex/SealedCollection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="708">
+          <caret line="48" column="5" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
+          <folding>
+            <element signature="e#41#78#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -765,93 +764,88 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Edge/Factory/FromToFactory.php">
+    <entry file="file://$PROJECT_DIR$/src/Edge/Collection.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="41" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
+        <state relative-caret-position="525">
+          <caret line="25" column="9" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
           <folding>
-            <element signature="e#47#76#0#PHP" expanded="true" />
+            <element signature="e#39#76#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GraphFactoryInterface.php">
+    <entry file="file://$PROJECT_DIR$/src/Edge/Undirected.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+        <state relative-caret-position="273">
+          <caret line="13" column="43" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
+    <entry file="file://$PROJECT_DIR$/src/Edge/Base.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vertex/Collection.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vertex/SealedCollection.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="582">
+          <caret line="41" column="53" selection-start-line="41" selection-start-column="53" selection-end-line="41" selection-end-column="53" />
           <folding>
-            <element signature="e#41#78#0#PHP" expanded="true" />
+            <element signature="e#39#87#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Edge/Core/EndPoints.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="21" column="49" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Feature/GraphEdgeTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="19" column="35" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
+          <folding>
+            <element signature="e#48#87#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Graph.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="27" column="39" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
+        <state relative-caret-position="588">
+          <caret line="31" column="37" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="37" />
           <folding>
-            <element signature="e#34#87#0#PHP" expanded="true" />
+            <element signature="e#34#63#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Factory/EmptyGraphFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+          <folding>
+            <element signature="e#34#91#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Factory/GraphFactoryInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Factory/JsonGraphFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/Feature/GraphBuildTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
-          <folding>
-            <element signature="e#48#73#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Feature/GraphEdgeTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="29" selection-end-column="46" />
-          <folding>
-            <element signature="e#48#94#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Feature/GraphTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="687">
-          <caret line="56" column="5" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
-          <folding>
-            <element signature="e#48#73#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Config/JsonGraphFactory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="34" column="23" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
-          <folding>
-            <element signature="e#47#88#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="126">
+          <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
         </state>
       </provider>
     </entry>
