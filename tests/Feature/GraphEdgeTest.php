@@ -22,11 +22,11 @@ class GraphEdgeTest extends TestCase {
     /** @test */
     public function it_can_have_an_edge_created_between_two_vertices()
     {
-        $this->graph->define(Undirected::Create(EndPoints::Create('a', 'b')));
+//        $this->graph->define(Undirected::Create(EndPoints::Create('a', 'b')));
         $this->graph->define(FromTo::Create(EndPoints::Create('b', 'c')));
         $this->graph->define(ToFrom::Create(EndPoints::Create('a', 'c')));
 
-//        $this->graph->add()->edge()->withId('a')->andId('b');
+        $this->graph->add()->edge()->withId('a')->andId('b');
 //        $this->graph->add()->edge()->withId('a')->toId('b');
 //        $this->graph->add()->edge()->withId('a')->fromId('b');
 
