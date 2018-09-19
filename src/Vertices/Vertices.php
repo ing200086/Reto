@@ -4,7 +4,6 @@ namespace Ing200086\Reto\Vertices;
 
 use Ing200086\Reto\Interfaces\VertexInterface;
 use Ing200086\Reto\Interfaces\VerticesInterface;
-use Ing200086\Reto\Vertex\Single;
 
 /**
  * Class VertexCollection

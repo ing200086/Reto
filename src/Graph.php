@@ -40,4 +40,9 @@ class Graph {
     {
         return $this->_vertices;
     }
+
+    public function add() : GraphModifier
+    {
+        return GraphModifier::Create($this->_vertices, $this->_edges);
+    }
 }

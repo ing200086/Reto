@@ -10,6 +10,12 @@ use Ing200086\Reto\Graph;
 use Ing200086\Reto\Vertex\Single;
 use PHPUnit\Framework\TestCase;
 
+/**
+ * Class GraphEdgeTest
+ *
+ * @package Ing200086\Reto\Tests\Feature
+ * @group focus
+ */
 class GraphEdgeTest extends TestCase {
     protected $graph;
 
@@ -20,6 +26,10 @@ class GraphEdgeTest extends TestCase {
         $this->graph->define(FromTo::Create(EndPoints::Create('b', 'c')));
         $this->graph->define(ToFrom::Create(EndPoints::Create('a', 'c')));
 
+//        $this->graph->add()->edge()->withId('a')->andId('b');
+//        $this->graph->add()->edge()->withId('a')->toId('b');
+//        $this->graph->add()->edge()->withId('a')->fromId('b');
+
         $this->assertEquals(3, count($this->graph->edges()));
     }
 
@@ -27,8 +37,12 @@ class GraphEdgeTest extends TestCase {
     {
         parent::setUp();
         $this->graph = Graph::Create();
-        $this->graph->vertices()->add(Single::Create('a'));
-        $this->graph->vertices()->add(Single::Create('b'));
-        $this->graph->vertices()->add(Single::Create('c'));
+//        $this->graph->vertices()->add(Single::Create('a'));
+//        $this->graph->vertices()->add(Single::Create('b'));
+//        $this->graph->vertices()->add(Single::Create('c'));
+
+        $this->graph->add()->vertex(Single::Create('a'));
+        $this->graph->add()->vertex(Single::Create('b'));
+        $this->graph->add()->vertex(Single::Create('c'));
     }
 }
