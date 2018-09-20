@@ -17,18 +17,17 @@ use PHPUnit\Framework\TestCase;
  * @group focus
  */
 class GraphEdgeTest extends TestCase {
+    /**
+     * @var Graph
+     */
     protected $graph;
 
     /** @test */
     public function it_can_have_an_edge_created_between_two_vertices()
     {
-//        $this->graph->define(Undirected::Create(EndPoints::Create('a', 'b')));
+        $this->graph->define(Undirected::Create(EndPoints::Create('a', 'b')));
         $this->graph->define(FromTo::Create(EndPoints::Create('b', 'c')));
         $this->graph->define(ToFrom::Create(EndPoints::Create('a', 'c')));
-
-        $this->graph->add()->edge()->withId('a')->andId('b');
-//        $this->graph->add()->edge()->withId('a')->toId('b');
-//        $this->graph->add()->edge()->withId('a')->fromId('b');
 
         $this->assertEquals(3, count($this->graph->edges()));
     }
@@ -37,12 +36,9 @@ class GraphEdgeTest extends TestCase {
     {
         parent::setUp();
         $this->graph = Graph::Create();
-//        $this->graph->vertices()->add(Single::Create('a'));
-//        $this->graph->vertices()->add(Single::Create('b'));
-//        $this->graph->vertices()->add(Single::Create('c'));
 
-        $this->graph->add()->vertex(Single::Create('a'));
-        $this->graph->add()->vertex(Single::Create('b'));
-        $this->graph->add()->vertex(Single::Create('c'));
+        $this->graph->define(Single::Create('a'));
+        $this->graph->define(Single::Create('b'));
+        $this->graph->define(Single::Create('c'));
     }
 }

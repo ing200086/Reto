@@ -3,7 +3,9 @@
 namespace Ing200086\Reto\Edge;
 
 use Ing200086\Reto\Interfaces\EdgeInterface;
+use Ing200086\Reto\Interfaces\EdgesInterface;
 use Ing200086\Reto\Interfaces\EndPointsInterface;
+use Ing200086\Reto\Interfaces\VerticesInterface;
 
 /**
  * Class Base
@@ -33,5 +35,10 @@ abstract class Base implements EdgeInterface {
     public function points() : EndPointsInterface
     {
         return $this->_points;
+    }
+
+    public function defineOn(VerticesInterface $vertices, EdgesInterface $edges) : void
+    {
+        $edges->create($this, $vertices);
     }
 }

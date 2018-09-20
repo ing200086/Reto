@@ -2,7 +2,9 @@
 
 namespace Ing200086\Reto\Vertex;
 
+use Ing200086\Reto\Interfaces\EdgesInterface;
 use Ing200086\Reto\Interfaces\VertexInterface;
+use Ing200086\Reto\Interfaces\VerticesInterface;
 
 /**
  * Class Single
@@ -25,5 +27,10 @@ class Single implements VertexInterface {
     public function getId() : string
     {
         return $this->_id;
+    }
+
+    public function defineOn(VerticesInterface $vertices, EdgesInterface $edges) : void
+    {
+        $vertices->add($this);
     }
 }

@@ -3,10 +3,9 @@
 namespace Ing200086\Reto;
 
 use Ing200086\Reto\Edges\Edges;
-use Ing200086\Reto\Interfaces\EdgeInterface;
+use Ing200086\Reto\Interfaces\DefinableInterface;
 use Ing200086\Reto\Interfaces\GraphFactoryInterface;
 use Ing200086\Reto\Interfaces\VerticesInterface;
-use Ing200086\Reto\Vertices\Vertices;
 
 class Graph {
     protected $_vertices;
@@ -31,18 +30,13 @@ class Graph {
         return $this->_edges;
     }
 
-    public function define(EdgeInterface $edge)
+    public function define(DefinableInterface $object) : void
     {
-        $this->_edges->create($edge, $this->vertices());
+        $object->defineOn($this->_vertices, $this->_edges);
     }
 
     public function vertices()
     {
         return $this->_vertices;
-    }
-
-    public function add() : GraphModifier
-    {
-        return GraphModifier::Create($this->_vertices, $this->_edges);
     }
 }

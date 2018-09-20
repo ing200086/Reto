@@ -4,12 +4,13 @@ namespace Ing200086\Reto\Edges;
 
 use Ing200086\Envase\EntityContainer;
 use Ing200086\Reto\Interfaces\EdgeInterface;
+use Ing200086\Reto\Interfaces\EdgesInterface;
 use Ing200086\Reto\Interfaces\SealedVerticesInterface;
 
-class Edges implements \Countable {
+class Edges implements EdgesInterface {
     protected $container;
 
-    public function __construct()
+    protected function __construct()
     {
         $this->container = EntityContainer::Create();
     }
@@ -17,12 +18,12 @@ class Edges implements \Countable {
     /**
      * @return Edges
      */
-    public static function CreateNew()
+    public static function CreateNew() : EdgesInterface
     {
         return new static();
     }
 
-    public function create(EdgeInterface $edge, SealedVerticesInterface $vertices)
+    public function create(EdgeInterface $edge, SealedVerticesInterface $vertices) : void
     {
         if ( $edge->points()->isValid($vertices) )
         {

@@ -6,7 +6,6 @@ use Ing200086\Envase\EntityContainer;
 use Ing200086\Envase\Interfaces\EntityContainerInterface;
 use Ing200086\Reto\Interfaces\SealedVerticesInterface;
 use Ing200086\Reto\Interfaces\VertexInterface;
-use Ing200086\Reto\Interfaces\VerticesInterface;
 
 class SealedVertices implements SealedVerticesInterface {
     /**
