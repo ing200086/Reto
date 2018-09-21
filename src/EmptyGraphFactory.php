@@ -2,10 +2,10 @@
 
 namespace Ing200086\Reto;
 
-use Ing200086\Reto\Edges\Edges;
 use Ing200086\Reto\Interfaces\GraphFactoryInterface;
-use Ing200086\Reto\Interfaces\VerticesInterface;
-use Ing200086\Reto\Vertices\Vertices;
+use Ing200086\Reto\Interfaces\VertexRepositoryInterface;
+use Ing200086\Reto\Repository\EdgeRepository;
+use Ing200086\Reto\Repository\VertexRepository;
 
 class EmptyGraphFactory implements GraphFactoryInterface {
     public static function Create()
@@ -13,14 +13,14 @@ class EmptyGraphFactory implements GraphFactoryInterface {
         return new static();
     }
 
-    public function vertices() : VerticesInterface
+    public function vertices() : VertexRepositoryInterface
     {
-        return Vertices::CreateNew();
+        return VertexRepository::Create();
     }
 
     public function edges()
     {
-        return Edges::CreateNew();
+        return EdgeRepository::Create();
     }
 
 }

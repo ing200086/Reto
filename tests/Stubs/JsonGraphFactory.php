@@ -2,12 +2,12 @@
 
 namespace Ing200086\Reto\Tests\Stubs;
 
-use Ing200086\Reto\Edges\Edges;
 use Ing200086\Reto\Interfaces\GraphFactoryInterface;
-use Ing200086\Reto\Interfaces\VerticesInterface;
+use Ing200086\Reto\Interfaces\VertexRepositoryInterface;
+use Ing200086\Reto\Repository\EdgeRepository;
+use Ing200086\Reto\Repository\VertexRepository;
 use Ing200086\Reto\Tests\Stubs\Edge\SimpleFactory;
 use Ing200086\Reto\Vertex\Single;
-use Ing200086\Reto\Vertices\Vertices;
 
 class JsonGraphFactory implements GraphFactoryInterface {
     protected $_vertices;
@@ -31,7 +31,7 @@ class JsonGraphFactory implements GraphFactoryInterface {
 
     protected function populateVertices(array $vertices)
     {
-        $this->_vertices = Vertices::CreateNew();
+        $this->_vertices = VertexRepository::Create();
         foreach ( $vertices as $vertex )
         {
             $this->_vertices->add(Single::Create($vertex));
@@ -45,10 +45,10 @@ class JsonGraphFactory implements GraphFactoryInterface {
 
     protected function populateEdges(array $edges)
     {
-        $this->_edges = Edges::CreateNew();
+        $this->_edges = EdgeRepository::Create();
         foreach ( $edges as $edge )
         {
-            $this->_edges->create($this->_edgeFactory->getEdge($edge), $this->_vertices);
+            $this->_edges->add($this->_edgeFactory->getEdge($edge));
         }
     }
 
@@ -57,7 +57,7 @@ class JsonGraphFactory implements GraphFactoryInterface {
         return new static($directory . '/' . $filename);
     }
 
-    public function vertices() : VerticesInterface
+    public function vertices() : VertexRepositoryInterface
     {
         return $this->_vertices;
     }

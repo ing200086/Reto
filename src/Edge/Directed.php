@@ -10,11 +10,11 @@ use Ing200086\Reto\Interfaces\VertexRepositoryInterface;
 use Ing200086\Reto\Points\EndPoints;
 
 /**
- * Class Undirected
+ * Class Directed
  *
  * @package Ing200086\Reto\Edge
  */
-class Undirected implements EdgeInterface {
+class Directed implements EdgeInterface {
     protected $_points;
 
     public function __construct(EndPointsInterface $endPoints)
@@ -48,6 +48,6 @@ class Undirected implements EdgeInterface {
 
     public function getId() : string
     {
-        return $this->_points->from() . '<>' . $this->_points->to();
+        return $this->_points->from() . '->' . $this->_points->to();
     }
 }

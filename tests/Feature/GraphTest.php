@@ -7,6 +7,9 @@ use Ing200086\Reto\Vertex\Single;
 use PHPUnit\Framework\TestCase;
 
 class GraphTest extends TestCase {
+    /**
+     * @var Graph
+     */
     protected $graph;
 
     /** @test */
@@ -32,7 +35,7 @@ class GraphTest extends TestCase {
     {
         $this->assertFalse($this->graph->vertices()->has('d'));
 
-        $this->graph->vertices()->add(Single::Create('d'));
+        $this->graph->define(Single::Create('d'));
 
         $this->assertTrue($this->graph->vertices()->has('d'));
     }
@@ -41,8 +44,8 @@ class GraphTest extends TestCase {
     {
         parent::setUp();
         $this->graph = Graph::Create();
-        $this->graph->vertices()->add(Single::Create('a'));
-        $this->graph->vertices()->add(Single::Create('b'));
-        $this->graph->vertices()->add(Single::Create('c'));
+        $this->graph->define(Single::Create('a'));
+        $this->graph->define(Single::Create('b'));
+        $this->graph->define(Single::Create('c'));
     }
 }

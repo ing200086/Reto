@@ -2,16 +2,16 @@
 
 namespace Ing200086\Reto;
 
-use Ing200086\Reto\Edges\Edges;
 use Ing200086\Reto\Interfaces\DefinableInterface;
+use Ing200086\Reto\Interfaces\EdgeRepositoryInterface;
 use Ing200086\Reto\Interfaces\GraphFactoryInterface;
-use Ing200086\Reto\Interfaces\VerticesInterface;
+use Ing200086\Reto\Interfaces\VertexRepositoryInterface;
 
 class Graph {
     protected $_vertices;
     protected $_edges;
 
-    protected function __construct(VerticesInterface $vertices, Edges $edges)
+    protected function __construct(VertexRepositoryInterface $vertices, EdgeRepositoryInterface $edges)
     {
         $this->_vertices = $vertices;
         $this->_edges = $edges;

@@ -3,41 +3,35 @@
 namespace Ing200086\Reto\Points;
 
 use Ing200086\Reto\Interfaces\EndPointsInterface;
-use Ing200086\Reto\Interfaces\SealedVerticesInterface;
+use Ing200086\Reto\Interfaces\VertexRepositoryInterface;
 
 class EndPoints implements EndPointsInterface {
-    protected $_source;
-    protected $_destination;
+    protected $_from;
+    protected $_to;
 
-    public function __construct(string $source, string $_destination)
+    public function __construct(string $from, string $to)
     {
-        $this->_source = $source;
-        $this->_destination = $_destination;
+        $this->_from = $from;
+        $this->_to = $to;
     }
 
-    public static function Create(string $source, string $destination)
+    public static function Create(string $from, string $to)
     {
-        return new static($source, $destination);
+        return new static($from, $to);
     }
 
-    /**
-     * @return string
-     */
-    public function source() : string
+    public function from() : string
     {
-        return $this->_source;
+        return $this->_from;
     }
 
-    /**
-     * @return string
-     */
-    public function destination() : string
+    public function to() : string
     {
-        return $this->_destination;
+        return $this->_to;
     }
 
-    public function isValid(SealedVerticesInterface $vertices) : bool
+    public function isIn(VertexRepositoryInterface $vertices) : bool
     {
-        return ($vertices->has($this->_source) && $vertices->has($this->_destination));
+        return ($vertices->has($this->_from) && $vertices->has($this->_to));
     }
 }
